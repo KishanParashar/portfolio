@@ -1,65 +1,143 @@
+"use client"
 import Image from "next/image";
+import { useState, useRef } from "react";
+import Link from "next/link";
+
 
 export default function Home() {
+
+  const [isPlaying, setisPlaying] = useState(false)
+  const videoref = useRef(null);
+
+
+  const handleclick = () => {
+
+    if (isPlaying) {
+      videoref.current.pause();
+    }
+    else {
+      videoref.current.play();
+    }
+    setisPlaying(!isPlaying);
+  };
+  const handleend = () => {
+    setisPlaying(false)
+  }
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <video ref={videoref} onEnded={handleend} className=" h-screen" src="items/port_video.mp4" />
+
+      <div onClick={handleclick} className="cursor-pointer text-black w-14 h-14 relative bottom-60 left-3/4  bg-green-300 hover:bg-yellow-300  rounded-full flex justify-center items-center">
+        <img id="play" className="invert " src={isPlaying ? "items/pause.png" : "items/play.png"} />
+      </div>
+      {/* <div className="h-2 bg-amber-200 w-full"></div> */}
+      <div className="mywork pb-24">
+
+        <h1 className="text-center text-green-300 text-2xl font-bold py-4 ">My Work</h1>
+
+        <div className="firsttwo container m-auto flex gap-4">
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img src="items/getmechai.jpeg" />
+            <p>Get Me a Chai-This is a Patreon clone in next.js</p>
+            <Link className="text-blue-400" href={"/getmechai"}>Learn More..</Link>
+          </div>
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img className="w-full " src="items/spotify.jpeg" />
+            <p>This is a spotify clone with html,css and javasript</p>
+            <Link className="text-blue-400" href={"/spotify"}>Learn More..</Link>
+          </div>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="firsttwo container m-auto flex gap-4 my-4">
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img src="items/urlshortner.jpeg" />
+            <p>BitLinks-A URL Shortner</p>
+            <Link className="text-blue-400" href={"/urlshortner"}>Learn More..</Link>
+          </div>
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img className="w-full " src="items/passman.jpeg" />
+            <p>PassOP-A password manager</p>
+            <Link className="text-blue-400" href={"/passwordm"}>Learn More..</Link>
+          </div>
+
         </div>
-      </main>
-    </div>
+        <div className="firsttwo container m-auto flex gap-4">
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img src="items/todo.jpeg" />
+            <p>This is a Todo app to manage your daily todo works using React</p>
+
+          </div>
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img className="w-full " src="items/gym.jpeg" />
+            <p>This is only user interface of a Gym Website using css and html</p>
+
+          </div>
+
+        </div>
+
+        <div className="firsttwo container m-auto my-4 flex gap-4">
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img src="items/netflix.jpeg" />
+            <p>This is only user interface of Netflix using css and html</p>
+
+          </div>
+          <div className="text-white bg-gray-700 p-4 rounded-2xl w-full">
+            <img className="w-full " src="items/twitter.jpeg" />
+            <p>This is only user interface of Twitter using css and html</p>
+
+          </div>
+
+        </div>
+        <div className="flex flex-col justify-center items-center text-white gap-6 py-4">
+          <h1 className=" text-green-300 text-2xl font-bold py-4 ">Who am I? What have I done? 👇 Your click decides.</h1>
+          <div className="flex gap-20">
+          <Link href={"/about"}>
+          <button className="flex text-black items-center cursor-pointer px-4 py-2 rounded-4xl bg-gradient-to-r from-blue-400 to-red-400">👋 Meet Me
+            <lord-icon
+              src="https://cdn.lordicon.com/lqzgzvkx.json"
+              trigger="hover"
+              >
+            </lord-icon>
+          </button>
+          </Link>
+          <Link href={"/achivements"}>
+          <button className="flex text-black items-center cursor-pointer px-4 py-2 rounded-4xl bg-gradient-to-r from-blue-400 to-red-400">🏆 Highlights
+            <lord-icon
+              src="https://cdn.lordicon.com/lqzgzvkx.json"
+              trigger="hover"
+              >
+            </lord-icon>
+          </button>
+          </Link>
+          </div>
+
+        </div>
+        <div className="flex flex-col py-4 px-7 gap-3 bg-gray-700 font-bold text-2xl connect w-full md:w-1/2  mx-auto items-center justify-center rounded-xl my-9">
+          <h1 className="text-green-400 ">Let's Connect</h1>
+          <div className="flex flex-col justify-start gap-3">
+            <div>
+            <h1 className="text-black font-bold text-start">Email</h1>
+            <h1 className="text-blue-400 bg-gray-800 px-2 py-2 border-gray-600 rounded-xl border-2">kishanparashar@iitbhilai.ac.in</h1>
+            
+            </div>
+            <div>
+            <h1 className="text-black text-start">For My Coding Profiles</h1>
+            <Link href={"/about"}>
+            <button className="flex w-full text-black items-center justify-center cursor-pointer px-4 py-2 rounded-4xl bg-gradient-to-r from-blue-400 to-red-400">Hit Me
+            <lord-icon
+              src="https://cdn.lordicon.com/lqzgzvkx.json"
+              trigger="hover"
+              >
+            </lord-icon>
+          </button>
+          </Link>
+          </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </>
   );
 }
