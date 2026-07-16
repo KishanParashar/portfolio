@@ -4,7 +4,7 @@ const page = () => {
   return (
     <>
       <div className='pb-24'>
-        <div className='flex gap-4 my-10 items-baseline'>
+        <div className='flex md:flex-row flex-col gap-4 my-10 items-baseline'>
           <img className='h-40 rounded-2xl' src='items/me.png' />
           <h1 className='text-green-400 text-6xl font-bold relative bottom-0'>Hi, I'am Kishan Parashar</h1>
         </div>
