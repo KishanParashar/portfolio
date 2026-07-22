@@ -187,27 +187,27 @@ const page = () => {
         <div className='firstr flex gap-4 my-4'>
           <div className='bg-gray-700 w-full p-4 rounded-xl'>
             <img className='w-full h-32' src='items/leetcode.jpeg'/>
-            <p>This is my Leetcode Profile Link-</p>
-            <Link className='text-blue-400' href={"https://leetcode.com/u/Kishan_parashar/"}>Check My Profile</Link>
+            
+            <Link className='text-blue-400 hover:text-blue-300' href={"https://leetcode.com/u/Kishan_parashar/"}><span className='hover:text-blue-300'>Check My Profile</span></Link>
             {/* <Link href={}></Link> */}
             </div>
           <div className='bg-gray-700 w-full p-4 rounded-xl'>
             <img className='w-full h-32' src='items/linkedin.jpeg'/>
-            <p>This is my Linkedin Profile Link-</p>
-            <Link className='text-blue-400' href={"https://www.linkedin.com/in/kishan-parashar-a5a106286/"}>Check My Profile</Link>
+            
+            <Link className='text-blue-400 hover:text-blue-300' href={"https://www.linkedin.com/in/kishan-parashar-a5a106286/"}>Check My Profile</Link>
             </div>
         </div>
 
         <div className='secondr flex w-full gap-4'>
           <div className='bg-gray-700 w-full p-4 rounded-xl'>
             <img className='w-full h-32' src='items/github.jpeg'/>
-            <p>This is my GitHub Profile Link-</p>
-            <Link className='text-blue-400' href={"https://github.com/KishanParashar"}>Check My Profile</Link>
+            
+            <Link className='text-blue-400 hover:text-blue-300' href={"https://github.com/KishanParashar"}>Check My Profile</Link>
           </div>
           <div className='bg-gray-700 w-full p-4 rounded-xl'>
            <img className='w-full h-32' src='items/gfg.jpg'/>
-            <p>This is my GeeksForGeeks Profile Link-</p>
-            <Link className='text-blue-400' href={"https://www.geeksforgeeks.org/profile/kparasht2kz"}>Check My Profile</Link>
+            
+            <Link className='text-blue-400 hover:text-blue-300' href={"https://www.geeksforgeeks.org/profile/kparasht2kz"}>Check My Profile</Link>
             </div>
         </div>
       
