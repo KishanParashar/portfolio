@@ -34,43 +34,83 @@ export default function Home() {
       <div className="mywork pb-24">
 
         <h1 className="text-center text-green-300 text-2xl font-bold py-4 ">My Work</h1>
-
+        
         <div className="firsttwo container m-auto flex gap-4">
+          {/* <Link href={"https://github.com/KishanParashar/AI-Powered-Fake-News-Detection.git"}> */}
           <div className="bg-gray-700 p-4 rounded-2xl w-full">
-            <img src="items/getmechai.jpeg" />
-            <p>Get Me a Chai-This is a Patreon clone in next.js</p>
+            <img className="w-full  "src="items/fake_news_home.jpeg" />
+            
+            <p>Fake News Detector.</p>
+            <div className="flex justify-between">
+            <Link className="text-blue-400" href={"/fakenews"}>Learn More..</Link>
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/AI-Powered-Fake-News-Detection.git"}>GitHub</Link>
+            </div>
+
+          </div>
+          {/* </Link> */}
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img className="w-full  " src="items/object_home.png" />
+            <p>Smart Lost Object Finder</p>
+            <div className="flex justify-between">
+            <Link className="text-blue-400" href={"/objectfinder"}>Learn More..</Link>
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/Smart-Lost-Object-Finder.git"}>GitHub</Link>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="firsttwo container m-auto flex gap-4 my-4">
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img className="w-full " src="items/getmechai.jpeg" />
+            <p>Get Me a Chai.</p>
+             <div className="flex justify-between">
             <Link className="text-blue-400" href={"/getmechai"}>Learn More..</Link>
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/Get-me-a-Chai.git"}>GitHub</Link>
+            </div>
           </div>
           <div className="bg-gray-700 p-4 rounded-2xl w-full">
-            <img className="w-full " src="items/spotify.jpeg" />
-            <p>This is a spotify clone with html,css and javasript</p>
+            <img className="w-full " src="items/spot.jpeg" />
+            <p>This is a spotify clone.</p>
+             <div className="flex justify-between">
             <Link className="text-blue-400" href={"/spotify"}>Learn More..</Link>
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/Spotify-Clone.git"}>GitHub</Link>
+            </div>
           </div>
 
         </div>
         <div className="firsttwo container m-auto flex gap-4 my-4">
           <div className="bg-gray-700 p-4 rounded-2xl w-full">
-            <img src="items/urlshortner.jpeg" />
+            <img className="w-full " src="items/urlshortner.jpeg" />
             <p>BitLinks-A URL Shortner</p>
+             <div className="flex justify-between">
             <Link className="text-blue-400" href={"/urlshortner"}>Learn More..</Link>
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/URL-Shortner.git"}>GitHub</Link>
+            </div>
           </div>
           <div className="bg-gray-700 p-4 rounded-2xl w-full">
             <img className="w-full " src="items/passman.jpeg" />
-            <p>PassOP-A password manager</p>
+            <p>Password manager</p>
+             <div className="flex justify-between">
             <Link className="text-blue-400" href={"/passwordm"}>Learn More..</Link>
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/PassOP-Your-own-password-manager.git"}>GitHub</Link>
+            </div>
           </div>
 
         </div>
         <div className="firsttwo container m-auto flex gap-4">
           <div className="bg-gray-700 p-4 rounded-2xl w-full">
             <img src="items/todo.jpeg" />
-            <p>This is a Todo app to manage your daily todo works using React</p>
+            <p>This is a Todo app.</p>
+            
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/iTask-Your-Task-Planner.git"}>GitHub</Link>
+            
 
           </div>
           <div className="bg-gray-700 p-4 rounded-2xl w-full">
             <img className="w-full " src="items/gym.jpeg" />
-            <p>This is only user interface of a Gym Website using css and html</p>
-
+            <p>Gym Main Page.</p>
+             <Link className="text-blue-400" href={"https://github.com/KishanParashar/GYM-main-page.git"}>GitHub</Link>
+            
           </div>
 
         </div>
@@ -78,12 +118,15 @@ export default function Home() {
         <div className="firsttwo container m-auto my-4 flex gap-4">
           <div className="bg-gray-700 p-4 rounded-2xl w-full">
             <img src="items/netflix.jpeg" />
-            <p>This is only user interface of Netflix using css and html</p>
-
+            <p>Netflix Main Page.</p>
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/Netflix-Clone.git"}>GitHub</Link>
+            
           </div>
           <div className="text-white bg-gray-700 p-4 rounded-2xl w-full">
             <img className="w-full " src="items/twitter.jpeg" />
-            <p>This is only user interface of Twitter using css and html</p>
+            <p>Twitter Main Page</p>
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/Twitter_Clone.git"}>GitHub</Link>
+            
 
           </div>
 
