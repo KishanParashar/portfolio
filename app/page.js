@@ -70,7 +70,7 @@ export default function Home() {
           </div>
           <div className="bg-gray-700 p-4 rounded-2xl w-full">
             <img className="w-full " src="items/spot.jpeg" />
-            <p>This is a spotify clone.</p>
+            <p>Spotify clone.</p>
              <div className="flex justify-between">
             <Link className="text-blue-400" href={"/spotify"}>Learn More..</Link>
             <Link className="text-blue-400" href={"https://github.com/KishanParashar/Spotify-Clone.git"}>GitHub</Link>
@@ -81,7 +81,7 @@ export default function Home() {
         <div className="firsttwo container m-auto flex gap-4 my-4">
           <div className="bg-gray-700 p-4 rounded-2xl w-full">
             <img className="w-full " src="items/urlshortner.jpeg" />
-            <p>BitLinks-A URL Shortner</p>
+            <p>URL Shortner</p>
              <div className="flex justify-between">
             <Link className="text-blue-400" href={"/urlshortner"}>Learn More..</Link>
             <Link className="text-blue-400" href={"https://github.com/KishanParashar/URL-Shortner.git"}>GitHub</Link>
