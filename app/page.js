@@ -34,8 +34,35 @@ export default function Home() {
       <div className="mywork pb-24">
 
         <h1 className="text-center text-green-300 text-2xl font-bold py-4 ">My Work</h1>
-        
+
         <div className="firsttwo container m-auto flex gap-4">
+          {/* <Link href={"https://github.com/KishanParashar/AI-Powered-Fake-News-Detection.git"}> */}
+          
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img className="w-full  "src="items/screenshot-4.jpeg" />
+            
+            <p>Adhyaya(Seat Manager)</p>
+            <div className="flex justify-between">
+            <Link className="text-blue-400" href={"/items/portfolio.html"}>Learn More..</Link>
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/Library_Manager"}>GitHub</Link>
+            </div>
+            
+
+          </div>
+         
+          {/* </Link> */}
+          <div className="bg-gray-700 p-4 rounded-2xl w-full">
+            <img className="w-full  " src="items/dashboard2.jpeg" />
+            <p>RateShield(RateLimiter)</p>
+            <div className="flex justify-between">
+            <Link className="text-blue-400" href={"/rateshield"}>Learn More..</Link>
+            <Link className="text-blue-400" href={"https://github.com/KishanParashar/RateShield"}>GitHub</Link>
+            </div>
+          </div>
+
+        </div>
+        
+        <div className="firsttwo container m-auto flex my-4 gap-4">
           {/* <Link href={"https://github.com/KishanParashar/AI-Powered-Fake-News-Detection.git"}> */}
           <div className="bg-gray-700 p-4 rounded-2xl w-full">
             <img className="w-full  "src="items/fake_news_home.jpeg" />
